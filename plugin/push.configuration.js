@@ -1,5 +1,4 @@
 /* global Plugin: false */
-var stripComments = Npm.require('strip-json-comments');
 
 // Check the config and log errors
 var checkConfig = function(config) { // jshint ignore:line
@@ -182,13 +181,14 @@ var configStringify = function(config) {
 };
 
 
-Plugin.registerSourceHandler('push.json', function(compileStep) {
+Plugin.registerSourceHandler('push.js', function(compileStep) {
   // Read the configuration
-  var configString = stripComments(compileStep.read().toString('utf8'));
+
+  var configString = compileStep.read().toString('utf8');
 
   try {
-    // Try parsing the json
-    var config = JSON.parse(configString);
+    // Try evaluating the JS
+    var config = eval(configString);
 
     // Clone the relevant config
     var cloneConfig = archConfig[compileStep.arch];
@@ -212,7 +212,7 @@ Plugin.registerSourceHandler('push.json', function(compileStep) {
     }
 
   } catch(err) {
-    console.error('Push configuration "config.push.json", JSON Error:', err.message);
+    console.error('Push configuration "config.push.js", Evaluation Error:', err.message);
   }
   // compileStep.arch
 });

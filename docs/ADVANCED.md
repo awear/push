@@ -71,7 +71,7 @@ Event types:
 ## Setting credentials / certificates
 
 This can be done via:
-* In `config.push.json` file
+* In `config.push.js` file
 * In client/server code
 
 ### Config
@@ -99,7 +99,7 @@ Add a `config.push.json` file in your project and configure credentials / keys /
 ```
 
 ### Server api
-Please note that `Push.Configure` is called automatically when using the `config.push.json` file. `Push.Configure` may only be called once otherwise it throws an error - this is intended behaviour.
+Please note that `Push.Configure` is called automatically when using the `config.push.js` file. `Push.Configure` may only be called once otherwise it throws an error - this is intended behaviour.
 ## NOTE! Outdated
 If you want to use the Push.Configure on the client use the options described [here](https://github.com/phonegap/phonegap-plugin-push#pushnotificationinitoptions)
 ```js

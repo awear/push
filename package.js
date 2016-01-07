@@ -22,10 +22,7 @@ Package.registerBuildPlugin({
   ],
   sources: [
     'plugin/push.configuration.js'
-  ],
-  npmDependencies: {
-    'strip-json-comments': '1.0.4'
-  }
+  ]
 });
 
 Package.onUse(function(api) {

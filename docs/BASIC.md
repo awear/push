@@ -8,7 +8,7 @@ Depending on the platforms you want to work with you will need some credentials 
 * [iOS](IOS.md)
 
 ## Config
-Add a `config.push.json` file in your project and configure credentials / keys / certificates:
+Add a `config.push.js` file in your project and configure credentials / keys / certificates:
 
 ```js
 {

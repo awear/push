@@ -31,7 +31,7 @@ Note:
 Version 3 uses the cordova npm plugin [phonegap-plugin-push](https://github.com/phonegap/phonegap-plugin-push#pushnotificationinitoptions)
 
 ## Config
-Add a `config.push.json` file in your project and configure credentials / keys / certificates:
+Add a `config.push.js` file in your project and configure credentials / keys / certificates:
 
 ```js
 {
